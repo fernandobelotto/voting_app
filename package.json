@@ -1,0 +1,22 @@
+{
+  "name": "voting_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "keywords": [],
+  "author": "",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "license": "ISC",
+  "scripts": {
+    "dev": "concurrently \"npm:dev:frontend\" \"npm:dev:backend\"",
+    "dev:backend": "npm run start:dev -w backend",
+    "dev:frontend": "npm run dev -w frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
