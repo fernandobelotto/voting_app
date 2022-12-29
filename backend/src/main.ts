@@ -8,6 +8,7 @@ async function bootstrap() {
   // allow cors for app
   app.enableCors();
 
+  // TODO - the global pipes don't work when graphql is enabled
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,

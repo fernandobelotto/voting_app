@@ -4,6 +4,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { PollEntity } from './polls/entities/poll.entity';
 import { PollsModule } from './polls/polls.module';
+// import { GraphQLModule } from '@nestjs/graphql';
+// import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 
 @Module({
   imports: [
@@ -15,6 +17,11 @@ import { PollsModule } from './polls/polls.module';
       entities: [PollEntity],
       synchronize: true,
     }),
+
+    // GraphQLModule.forRoot<ApolloDriverConfig>({
+    //   driver: ApolloDriver,
+    //   autoSchemaFile: 'schema.gql',
+    // }),
   ],
   controllers: [AppController],
   providers: [AppService],

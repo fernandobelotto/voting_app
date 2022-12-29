@@ -1,0 +1,27 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""poll """
+type PollModel {
+  id: Int!
+  title: String!
+  description: String!
+}
+
+type Query {
+  findAll: [PollModel!]!
+  findOne(id: String!): PollModel!
+}
+
+type Mutation {
+  create(newPollData: NewPollInput!): PollModel!
+  upvote(id: String!): PollModel!
+  downvote(id: String!): PollModel!
+  remove(id: String!): PollModel!
+}
+
+input NewPollInput {
+  title: String!
+  description: String!
+}
