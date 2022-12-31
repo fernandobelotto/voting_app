@@ -7,7 +7,7 @@ import {
   useDownvoteMutation,
   useUpvoteMutation,
 } from "../store/apis/pool.api";
-import { Poll } from "../types/Post";
+import { Poll } from "types";
 import { Button } from "./Button";
 import { SpacerFixed, SpacerHorizontal } from "./SpacerFixed";
 

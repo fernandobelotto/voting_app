@@ -10,28 +10,19 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
+import { PollFormType } from "types";
 import { useCreatePollMutation } from "../store/api";
 import { CreatePollForm } from "./CreatePollForm";
 
-type Props = {};
-
-export type FormType = {
-  title: string;
-  description: string;
-};
-
-function CreatePollModal({}: Props) {
+function CreatePollModal() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const form = useForm<FormType>();
+  const form = useForm<Partial<PollFormType>>();
 
-  const [createPoll, { isError, isLoading }] = useCreatePollMutation();
+  const [createPoll] = useCreatePollMutation();
 
-  const {
-    handleSubmit,
-    formState: { errors, isSubmitting },
-  } = form;
+  const { handleSubmit } = form;
 
-  function onSubmit(values: any) {
+  function onSubmit(values: Partial<PollFormType>) {
     createPoll(values);
     onClose();
   }
@@ -43,7 +34,7 @@ function CreatePollModal({}: Props) {
         <form onSubmit={handleSubmit(onSubmit)}>
           <ModalOverlay />
           <ModalContent>
-            <ModalHeader>Create Poll </ModalHeader>
+            <ModalHeader>Create Poll</ModalHeader>
             <ModalCloseButton />
             <ModalBody>
               <CreatePollForm form={form} />

@@ -1,0 +1,28 @@
+{
+  "name": "types",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "scripts": {
+    "dev": "tsup --watch --dts",
+    "build": "tsup --dts"
+  },
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "dts": true,
+    "sourcemap": true,
+    "format": [
+      "esm",
+      "cjs"
+    ]
+  },
+  "keywords": [],
+  "author": "Fernando Gabriel Belotto Bosco <fernando.bbosco@gmail.com> (https://fernandobelotto.com/)",
+  "license": "ISC",
+  "devDependencies": {
+    "tsup": "^6.5.0"
+  }
+}

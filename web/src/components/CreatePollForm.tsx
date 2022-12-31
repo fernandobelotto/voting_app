@@ -7,10 +7,9 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { UseFormReturn } from "react-hook-form";
-import { FormType } from "./CreatePollModal";
-
+import { PollFormType } from "types";
 type Props = {
-  form: UseFormReturn<FormType, any>;
+  form: UseFormReturn<Partial<PollFormType>, any>;
 };
 
 export const CreatePollForm = ({ form }: Props) => {

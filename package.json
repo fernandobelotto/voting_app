@@ -8,11 +8,12 @@
   "workspaces": [
     "web",
     "backend",
-    "mobile"
+    "mobile",
+    "types"
   ],
   "scripts": {
     "dev": "concurrently \"npm:dev:web\" \"npm:dev:backend\"",
-    "dev:mobile": "npm run start -w mobile",
+    "mobile": "npm run start -w mobile",
     "dev:backend": "npm run start:dev -w backend",
     "dev:web": "npm run dev -w web"
   },

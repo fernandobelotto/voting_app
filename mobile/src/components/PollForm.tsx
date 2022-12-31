@@ -6,7 +6,7 @@ import {
   useCreatePollMutation,
   useUpdatePollByIdMutation,
 } from "../store/apis/pool.api";
-import { Poll, PollFormType } from "../types/Post";
+import { Poll, PollFormType } from "types";
 import { SpacerFixed } from "./SpacerFixed";
 import TextInput from "./TextInput";
 

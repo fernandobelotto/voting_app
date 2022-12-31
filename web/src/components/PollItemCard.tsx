@@ -8,6 +8,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { memo } from "react";
+import { Poll } from "types";
 import {
   useDeletePollByIdMutation,
   useDownvoteMutation,
@@ -15,7 +16,7 @@ import {
 } from "../store/api";
 
 type Props = {
-  poll: any;
+  poll: Poll;
 };
 
 function PollItemCard({ poll }: Props) {
