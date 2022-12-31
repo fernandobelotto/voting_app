@@ -2,19 +2,19 @@
   "name": "voting_app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "private": true,
   "keywords": [],
   "author": "",
   "workspaces": [
-    "frontend",
-    "backend"
+    "web",
+    "backend",
+    "mobile"
   ],
-  "license": "ISC",
   "scripts": {
-    "dev": "concurrently \"npm:dev:frontend\" \"npm:dev:backend\"",
+    "dev": "concurrently \"npm:dev:web\" \"npm:dev:backend\"",
+    "dev:mobile": "npm run start -w mobile",
     "dev:backend": "npm run start:dev -w backend",
-    "dev:frontend": "npm run dev -w frontend"
+    "dev:web": "npm run dev -w web"
   },
   "devDependencies": {
     "concurrently": "^7.6.0"
