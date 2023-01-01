@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
-import { pollApi } from "./apis/pool.api";
+import { pollApi } from "types";
 
 const store = configureStore({
   reducer: {

@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 import { PollFormType } from "types";
-import { useCreatePollMutation } from "../store/api";
+import { useCreatePollMutation } from "types";
 import { CreatePollForm } from "./CreatePollForm";
 
 function CreatePollModal() {

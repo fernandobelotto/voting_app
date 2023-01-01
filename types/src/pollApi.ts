@@ -1,21 +1,22 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import * as toolkitRaw from "@reduxjs/toolkit/query/react";
+const { createApi, fetchBaseQuery } = ((toolkitRaw as any).default ??
+  toolkitRaw) as typeof toolkitRaw;
 
 const pollTag = "Poll";
-export const api = createApi({
-  reducerPath: "api",
+export const pollApi = createApi({
+  reducerPath: "polls",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:4000",
+    baseUrl: "http://192.168.15.30:4000",
   }),
   tagTypes: [pollTag],
   endpoints: (builder) => ({
-    getAllPolls: builder.query<any, void>({
+    getAllPolls: builder.query({
       query: () => "polls",
       providesTags: [pollTag],
     }),
     getPollById: builder.query({
       query: (id) => `polls/${id}`,
     }),
-
     createPoll: builder.mutation({
       query: (body) => ({
         url: "polls",
@@ -27,7 +28,7 @@ export const api = createApi({
     updatePollById: builder.mutation({
       query: ({ id, body }) => ({
         url: `polls/${id}`,
-        method: "PUT",
+        method: "PATCH",
         body,
       }),
       invalidatesTags: [pollTag],
@@ -56,13 +57,3 @@ export const api = createApi({
     }),
   }),
 });
-
-export const {
-  useCreatePollMutation,
-  useDownvoteMutation,
-  useUpvoteMutation,
-  useGetPollByIdQuery,
-  useDeletePollByIdMutation,
-  useGetAllPollsQuery,
-  useUpdatePollByIdMutation,
-} = api;

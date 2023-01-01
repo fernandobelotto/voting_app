@@ -13,7 +13,7 @@ import {
   useDeletePollByIdMutation,
   useDownvoteMutation,
   useUpvoteMutation,
-} from "../store/api";
+} from "types";
 
 type Props = {
   poll: Poll;

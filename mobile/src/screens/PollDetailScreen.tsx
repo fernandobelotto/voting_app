@@ -5,7 +5,7 @@ import { Container } from "../components/Container";
 import { PollForm } from "../components/PollForm";
 import { SpacerFixed } from "../components/SpacerFixed";
 import { RootStackParamList } from "../routes/MainStack";
-import { useGetPollByIdQuery } from "../store/apis/pool.api";
+import { useGetPollByIdQuery } from "types";
 
 type Props = NativeStackScreenProps<RootStackParamList, "PollDetailScreen">;
 

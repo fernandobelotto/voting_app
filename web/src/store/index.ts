@@ -1,13 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
-import { api } from "./api";
+import { pollApi } from "types";
 
 const store = configureStore({
   reducer: {
-    [api.reducerPath]: api.reducer,
+    [pollApi.reducerPath]: pollApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(api.middleware),
+    getDefaultMiddleware().concat(pollApi.middleware),
 });
 
 type RootState = ReturnType<typeof store.getState>;

@@ -2,10 +2,7 @@ import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { Button, StyleSheet, Text, View } from "react-native";
-import {
-  useCreatePollMutation,
-  useUpdatePollByIdMutation,
-} from "../store/apis/pool.api";
+import { useCreatePollMutation, useUpdatePollByIdMutation } from "types";
 import { Poll, PollFormType } from "types";
 import { SpacerFixed } from "./SpacerFixed";
 import TextInput from "./TextInput";

@@ -1,5 +1,5 @@
 import { SimpleGrid, Text } from "@chakra-ui/react";
-import { useGetAllPollsQuery } from "../store/api";
+import { useGetAllPollsQuery } from "types";
 import PollItemCard from "./PollItemCard";
 
 function PollsList() {

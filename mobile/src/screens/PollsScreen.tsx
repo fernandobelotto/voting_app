@@ -1,13 +1,13 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import React from "react";
 import { FlatList, RefreshControl, Text } from "react-native";
+import { useGetAllPollsQuery } from "types";
 import { Button } from "../components/Button";
 import { Container } from "../components/Container";
 import Heading from "../components/Heading";
 import { PollItem } from "../components/PollItem";
 import { SpacerFixed } from "../components/SpacerFixed";
 import { RootStackParamList } from "../routes/MainStack";
-import { useGetAllPollsQuery } from "../store/apis/pool.api";
 
 type Props = NativeStackScreenProps<RootStackParamList, "PollsScreen">;
 

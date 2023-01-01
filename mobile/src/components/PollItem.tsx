@@ -6,7 +6,7 @@ import {
   useDeletePollByIdMutation,
   useDownvoteMutation,
   useUpvoteMutation,
-} from "../store/apis/pool.api";
+} from "types";
 import { Poll } from "types";
 import { Button } from "./Button";
 import { SpacerFixed, SpacerHorizontal } from "./SpacerFixed";
