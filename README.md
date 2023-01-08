@@ -19,3 +19,6 @@ Web app made with nestjs on the backend and vite+react on the frontend to create
 4. run `yarn dev:mobile` in the root to run the mobile app
 4. Go to `localhost:3000` in your browser
 5. That's it!
+
+# Diagrams
+<img width="876" alt="image" src="https://user-images.githubusercontent.com/38187170/211224936-a2311cf0-1bde-4449-acab-a59061726245.png">
